@@ -49,15 +49,15 @@ for row in ticket_days:
 
 
 for row in ticket_days:
-    # print(
-    #     f"{bws_info['user_ticket_info'][row]['screen_name']} | 票种：{bws_info['user_ticket_info'][row]['sku_name']} | 电子票号：{bws_info['user_ticket_info'][row]['ticket']}"
-    # )
+    print(
+        f"{bws_info['user_ticket_info'][row]['screen_name']} | 票种：{bws_info['user_ticket_info'][row]['sku_name']} | 电子票号：{bws_info['user_ticket_info'][row]['ticket']}"
+    )
 
     for reserve in bws_info['reserve_list'][row]:
         title = reserve['act_title'].replace('\n', '')
         reserve_dict[reserve['reserve_id']] = [title, reserve['act_begin_time'], reserve['reserve_begin_time']]
-    #     print(f"活动代码：{reserve['reserve_id']}  {title} 预约：{t_to_d(reserve['reserve_begin_time'])} 开始：{t_to_d(reserve['act_begin_time'])}")
-    # print("\n")
+        print(f"活动代码：{reserve['reserve_id']}  {title} 预约：{t_to_d(reserve['reserve_begin_time'])} 开始：{t_to_d(reserve['act_begin_time'])}")
+    print("\n")
 
 time_offset = time_check()
 
