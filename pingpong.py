@@ -14,4 +14,4 @@ def measure_http_latency(url):
         return None
 
 # 示例
-measure_http_latency(input(":::"))
+measure_http_latency("https://api.bilibili.com/x/activity/bws/online/park/reserve/do")
