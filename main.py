@@ -22,7 +22,7 @@ def time_check():
     return time_offset
 
 def get_time():
-    return int(time.time() + time_offset)
+    return time.time() + time_offset
 
 
 print(
@@ -62,6 +62,7 @@ for row in ticket_days:
 time_offset = time_check()
 
 preTime = 0
+print(t_to_d(get_time()))
 print(f'preTime设置{preTime}喵')
 
 reserve_id_list = []
